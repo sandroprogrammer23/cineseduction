@@ -1,0 +1,446 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");*/
+:root {
+
+    /**
+     * colors
+     */
+  
+    --rich-black-fogra-29: hsl(225, 25%, 9%);
+    --rich-black-fogra-39: hsl(170, 21%, 5%);
+    --raisin-black: hsl(228, 13%, 15%);
+    --eerie-black: hsl(207, 19%, 11%);
+    --light-gray: hsl(0, 3%, 80%);
+    --gunmetal-1: hsl(229, 15%, 21%);
+    --gunmetal-2: hsl(216, 22%, 18%);
+    --gainsboro: hsl(0, 7%, 88%);
+    --citrine: hsl(57, 97%, 45%);
+    --xiketic: hsl(253, 21%, 13%);
+    --gray-x: hsl(0, 0%, 74%);
+    --white: hsl(0, 100%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --jet: hsl(0, 0%, 20%);
+    --orange: #f78b00;
+      --blue: #00285f;
+      --gray: #ededed;
+     --coca: #121212;
+     --red: #e51e2a;
+  
+    /**
+     * typography
+     */
+  
+    --ff-poppins: 'Poppins', sans-serif;
+  
+    --fs-1: 36px;
+    --fs-2: 32px;
+    --fs-3: 30px;
+    --fs-4: 24px;
+    --fs-5: 20px;
+    --fs-6: 18px;
+    --fs-7: 16px;
+    --fs-8: 15px;
+    --fs-9: 14px;
+    --fs-10: 13px;
+    --fs-11: 12px;
+    --fs-12: 11px;
+  
+    --fw-500: 500;
+    --fw-700: 700;
+  
+    /**
+     * transition
+     */
+  
+    --transition-1: 0.15s ease;
+    --transition-2: 0.25s ease-in;
+  
+    /**
+     * spacing
+     */
+  
+    --section-padding: 100px;
+  
+}  
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+  /*-----------------------------------*\
+   * #RESET
+  \*-----------------------------------*/
+  
+  li a{
+    list-style: none;    
+    text-decoration: none;
+    } 
+body{
+background: var(--rich-black-fogra-29);   
+font-family: "Poppins", sans-serif; 
+overflow-x:hidden;
+}    
+body.active { overflow: hidden; }
+
+.header {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+display: grid;
+justify-items: center;
+align-items: center;
+height: 100px;
+transition: var(--transition-2);
+z-index: 4;
+/*box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);*/
+background: rgb(0, 0, 0, 0.5);
+/*background: var(--xiketic);*/
+/*border-bottom: 1px solid var(--red);*/
+}
+.header .container {
+width: 100%;
+display: flex;
+justify-content: space-between;    
+/*border: 1px solid red;*/
+}
+.container .logo{
+margin-left: 5px;    
+display: flex;
+align-items: center;
+}
+.container .logo strong{
+margin-top: -4px;
+transform: rotate(90deg);    
+}
+.container .logo strong i{
+color: var(--red);
+font-size: 34px;        
+}
+.container .logo h2{
+color: var(--white);
+font-size: 34px;
+font-weight: 600;
+font-family: 'Great Vibes', cursive;
+margin-left: 20px;
+}
+.container .logo strong{
+color: var(--red);
+font-size: 32px;
+/*font-style: italic;*/
+font-weight: 600;
+font-family: 'Great Vibes', cursive;
+}
+.container .search{
+display: flex;
+align-items: center;
+background: var(--white);  
+background: none;  
+}
+.container .search input{
+width: 240px;
+padding: 5px;
+font-family: "Roboto", sans-serif;
+font-size: 14px;
+height: 40px;
+border-bottom-left-radius: 2px;
+border-top-left-radius: 2px;
+}
+.container .search button{
+background: var(--red);
+height: 40px;
+width: 60px;
+border-bottom-right-radius: 2px;
+border-top-right-radius: 2px;
+display: grid;
+justify-items: center;
+align-items: center;
+/*box-shadow: 2px 2px 2px var(--red);*/
+}
+.bx-search{
+color: var(--white); 
+font-size: 20px;   
+}
+.container .menu{
+display: flex;
+margin-right: 20px;
+align-items: center;    
+}
+.container .menu ul{
+display: flex;  
+}
+.container .menu ul li{
+text-decoration: none;
+list-style: none;
+}
+.container .menu ul li a{
+color: var(--white);
+font-size: 20px;
+margin-left: 10px;
+font-weight: 300;
+font-family: "Roboto", sans-serif;
+text-transform: uppercase;
+/*text-shadow: 2px 2px 2px var(--red);*/
+}
+.container .menu ul li a button{
+background: var(--red);
+width: 80px;
+height: 30px;    
+color: var(--white);
+border-radius: 2px;
+cursor: pointer;
+font-weight: 600;
+font-family: "Roboto", sans-serif;
+box-shadow: 2px 2px 2px var(--red);
+}
+.container .menu ul li a button:hover{
+width: 90px;
+height: 40px;    
+}
+.container .menu ul li a:hover{
+text-decoration: underline;    
+}
+
+/*slider frame*/
+.slider-frame {      
+/*max-width: 1280px;*/
+width: 100%;
+/*min-width: 300px;*/
+height: auto; 
+overflow: hidden;
+box-shadow: 50px 50px 50px 50px rgba(0, 0, 0, 0.2);
+} 
+.slider-frame ul {
+display: flex;
+padding: 0;
+width: 400%;
+animation: slide 30s infinite ease-in-out;
+}
+.slider-frame li{
+list-style: none;  
+width: 100%;
+}
+.slide{
+width:100%;
+height: 500px;    
+border-radius: 4px;
+}
+.slide .filme-info{
+background: rgb(0, 0, 0, 0.5);
+width: 100%;
+height: 100%;
+display: grid;
+align-items: center;
+}
+.slide .filme-info .container{
+width: 970px;
+margin-left: 50px; 
+/*border: 1px solid var(--red);*/
+}
+.slide .filme-info .container h2{
+color: white;
+font-weight: 800;
+font-size: 32px;
+}
+.m-i{
+display: flex;    
+}
+.m-i button{
+height: 40px;
+width: 120px;
+background: none;
+display: flex;
+align-items: center;
+/*border: 1px solid var(--red);    */
+border:none;
+margin-right: 10px;
+}
+.m-i button i{
+color: white;    
+font-size: 28px;
+}
+.m-i button strong{
+color: white;
+margin-left: 5px;
+}
+.m-i2{
+display: flex;
+margin-top: 10px;    
+}
+.m-i2 button{
+background: var(--red);  
+height: 40px;
+width: 140px;  
+color: white;
+cursor: pointer;
+display: flex;
+align-items: center;
+margin-right: 20px;
+border-radius: 4px;
+border-left: 4px solid var(--red);
+}
+.m-i2 button:hover{
+height: 50px;
+width: 150px;    
+}
+.m-i2 button i{
+color: white;
+font-size: 28px;    
+}
+.m-i2 button i strong{
+margin-left: 10px;  
+}
+.bx-info-circle{
+margin-right: 10px;    
+}
+/*rated*/
+.rated{
+width:98%;
+margin: 50px auto;
+background: var(--xiketic); 
+height: 60px;   
+display: grid;
+align-items: center;
+border-radius: 4px;
+}
+.rated .cont{
+display: flex;
+align-items: center;    
+color: white;
+}
+.rated .cont h2{
+margin-left: 20px; 
+margin-top: -4px;   
+}
+/*end rated*/
+@keyframes slide{
+    0%{margin-left: 0%;}
+    20%{margin-left: 0%;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    95%{margin-left: -300%;}
+}
+/*fim do slider frame*/
+
+/*start rated movies*/
+.rated-movies{
+width: 98%;
+margin: 20px auto;
+/*border: 1px solid red;  */  
+display: grid;
+align-items: center;
+grid-template-columns: 400px 400px 400px;
+gap: 40px;
+padding: 20px;
+justify-content: center;
+}
+
+.rated-movies .filme{
+width: 400px;
+height: 260px;
+/*border: 1px solid var(--red);*/
+display: grid;
+align-items: flex-end;
+/*border-radius: 4px;*/
+margin-right: 40px;
+border-radius: 4px;
+}
+
+.filme-loading{
+background: var(--xiketic);    
+animation: loading 2s infinite ease-in-out;
+border-radius: 8px;
+}
+
+@keyframes loading{
+    0%{background: var(--xiketic);}
+    20%{background: var(--gray);}
+
+    75%{background: var(--gunmetal-1);}
+    95%{background: var(--gunmetal-2);}
+}
+
+.rated-movies .filme .filme-info{
+background: rgb(0, 0, 0, 0.5);
+height: 60px;
+display: grid;
+align-items: center;
+border-bottom-left-radius: 4px;
+border-bottom-right-radius: 4px;
+}
+
+.rated-movies .filme .content{
+display: flex;
+justify-content: space-between;
+}
+
+.rated-movies .filme .content h2{
+color: white;
+margin-left: 4px;
+font-weight: 800;   
+}
+
+.rated-movies .filme .content button{
+background: var(--red);
+display: grid;
+justify-items: center;
+align-items: center;
+height: 40px;
+width: 40px;
+border-radius: 80px;  
+margin-right: 2px;
+cursor: pointer;
+}
+
+.rated-movies .filme .content button strong{
+color: white;    
+}
+
+.rated-movies .filme .content button strong i{
+font-size: 32px;
+margin-top: 2px;
+margin-left: 2px;  
+}
+/*end rated movies*/
+
+/*start manage slide*/
+.manage-slide {
+width: 98%;
+margin: -60px auto 20px;
+/*border: 1px solid var(--red);*/
+display: none;
+justify-items: center;
+}
+
+.manage-slide button{
+height: 40px;
+width: 40px;
+background: var(--red);
+color: white;
+font-weight: 600;
+border-radius: 80px;
+border: 2px solid var(--white);    
+margin-right: 5px;
+font-weight: 600;
+font-family: 'century ghotic';
+margin-left: 5px;
+cursor: pointer;
+}
+
+.manage-slide button:hover{
+height: 42px;
+width: 42px;
+}
+/*end manage slide*/
